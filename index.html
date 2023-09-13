@@ -32,7 +32,7 @@
                
                   .operaciones{
                         position:absolute;
-                        top: 19%;
+                        top: 18%;
                         left: 20%;
                     
                   }
@@ -73,7 +73,8 @@
                         </div>
                         <div class="resultado" >
                               <p > Resultado <h1 >0</h1> </p>
-                        </div>
+                                                </div>
+                                                <h2></h2>
             </div> 
       <script>
             
@@ -84,7 +85,9 @@
                   res =parseFloat(pn)+parseFloat(sn);
             
                   document.querySelector('h1').innerHTML = res;
-                  
+                  if(pn <0){ 
+                        document.querySelector('h2').innerHTML = "Estás utilizando un número negativo";
+                  }
                   }
             function resta() {
       
@@ -92,7 +95,11 @@
                   var sn = document.querySelector('#sn').value;
                   var res = pn-sn;
                   document.querySelector('h1').innerHTML = res;
-                  
+                  if ( res < 0 ){
+                        document.querySelector('h2').innerHTML = "El resultado es negativo, tiene un menos delante. eso es porque le queres quitar "+sn+" a un numero menor "+pn ;
+                  }
+
+
                   }
             function multi() {
             
@@ -100,14 +107,16 @@
             var sn = document.querySelector('#sn').value;
             var res = pn*sn;
                   document.querySelector('h1').innerHTML = res;
-            
+                  if ( res < 0 ){
+                        document.querySelector('h2').innerHTML = "El resultado es negativo, tiene un menos delante. eso es porque estas multiplicando algun numero negativole queres quitar "+sn+" a un numero menor "+pn ;
+                  }
       }
             function divi() {
             
             var pn = document.querySelector('#pn').value;
             var sn = document.querySelector('#sn').value;
-            var res = pn/sn;
-                  document.querySelector('h1').innerHTML = res;
+            var res =int(pn/sn);
+                  document.querySelector('h1').innerHTML = int;
       }
 
       </script>    
