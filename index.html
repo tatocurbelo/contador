@@ -1,49 +1,118 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <title> Contador</title>
-        <script>
-        let contador = 0;
-        let edad = ""
-            function sumar() {
-                contador++;
-                if (contador ==8) { edad = "Casi la edad de Mile";
-            }
+<html>
+      <head>
+            <title>Pilora</title>
+      
+            <style>
+                     
+                 
+                  .contenedor{
+                  top:0px;
+                  left:0px;
+                  position: absolute;
+                  display: inline-block;
+                 
+                              }
+                  .pn{
+                        position: absolute;
+                        top:58px;
+                        left: 380px;
+                        border:none; 
+                       
+                        
+                                
+                  }
+                  
+                  .sn{
+                        position: absolute;
+                        top: 165px;
+                        left: 380px;
+                        border:none; 
+                          
+                  
+                       
+                  }
+               
+                  .operaciones{
+                        position:absolute;
+                        top: 110px;
+                        left: 200px;
+                        
+
+                  }
+                  .resultado{
+                        position: absolute;
+                        top:270px;
+                        left:400px;
+
+                  }
+                  input {
+                        max-width: 150px;
+                                                font-size: 25px;
+                  }
                 
-                if (contador ==16) { edad = "La edad de Seba";
-            }
-            if (contador ==34) { edad = "La edad de Papá";
-            }
-            if (contador ==40) { edad = "Ojo estas llegando a la edad de Mamá ";
-            }  
-            if (contador ==45) { edad = "Ya falta menos para llegar a la edad de Mamá, segui apretando negrita";
-            }
-            if (contador ==57) { edad = "La edad de Mamá";
-            }
+            </style>
+      </head>
+      <body> 
+            <div class="contenedor">
+                  <img src="pepapig.jpg" alt="pepapig" width="1000px" >
+      
             
-                document.querySelector('h1').innerHTML = contador;
-                document.querySelector('h2').innerHTML = edad;
-                
-        }
-            function restar(){
-                contador--;
-                document.querySelector('h1').innerHTML = contador;
-            }
+                  <div style="text-align: center"> Calculadora de Pilora</div>
+                        <div class="pn">
+                        <input id="pn" type="number" name="pn" > 
+                        </div>
+                        <div class="sn">
+                        <input id="sn" type="number" name="sn">
+                        </div>
+                        <div class="operaciones">
+                              <button onclick="suma()">+</button>
+                              <button onclick="resta()">-</button>
+                              <button onclick="multi()">x</button>
+                              <button onclick="divi()">%</button>
+                        </div>
+                        <div class="resultado" >
+                              <p > resultado <h1 >0</h1> </p>
+                        </div>
+      </div> 
+      <script>
+            
+            function suma() {
+      
+                  var pn = document.querySelector('#pn').value;
+                  var sn = document.querySelector('#sn').value;
+                  res =parseFloat(pn)+parseFloat(sn);
+            
+                  document.querySelector('h1').innerHTML = res;
+                  
+                  }
+            function resta() {
+      
+                  var pn = document.querySelector('#pn').value;
+                  var sn = document.querySelector('#sn').value;
+                  var res = pn-sn;
+                  document.querySelector('h1').innerHTML = res;
+                  
+                  }
+            function multi() {
+            
+            var pn = document.querySelector('#pn').value;
+            var sn = document.querySelector('#sn').value;
+            var res = pn*sn;
+                  document.querySelector('h1').innerHTML = res;
+            
+      }
+            function divi() {
+            
+            var pn = document.querySelector('#pn').value;
+            var sn = document.querySelector('#sn').value;
+            var res = pn/sn;
+                  document.querySelector('h1').innerHTML = res;
+      }
 
+      </script>    
+      
+      
+      </body>
 
-        </script>
-
-    </head>
-
-
-    <body>
-        <div style=" position:absolute; top: 300px; left: 200px;">   
-             <h2> </h2>
-        </div>
-       
-        <h1>0</h1>
-        <button onclick="sumar()"> suma 1</button>
-        <button onclick="restar()"> resta 1</button>
-
-    </body>
-</html>
+      </html>
