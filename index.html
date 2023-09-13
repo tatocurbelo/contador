@@ -2,68 +2,68 @@
 <html>
       <head>
             <title>Pilora</title>
-      
+            
             <style>
-                     
-                 
+                  
                   .contenedor{
-                  top:0px;
-                  left:0px;
+                  width: 100%;
+                  border-color: rgb(175, 78, 43);
+                  border: 10px;
+                  border-style:solid;
                   position: absolute;
                   display: inline-block;
                  
                               }
                   .pn{
                         position: absolute;
-                        top:58px;
-                        left: 380px;
+                        top:10%;
+                        left:38%;
                         border:none; 
-                       
-                        
-                                
+                               
                   }
                   
                   .sn{
                         position: absolute;
-                        top: 165px;
-                        left: 380px;
+                        top: 28%;
+                        left: 38%;
                         border:none; 
-                          
-                  
-                       
+                      
                   }
                
                   .operaciones{
                         position:absolute;
-                        top: 110px;
-                        left: 200px;
-                        
-
+                        top: 15%;
+                        left: 20%;
+                    
                   }
                   .resultado{
                         position: absolute;
-                        top:270px;
-                        left:400px;
+                        top:46%;
+                        left:39%;
 
                   }
                   input {
                         max-width: 150px;
-                                                font-size: 25px;
+                        font-size: 25px;
+                  }
+                  button{
+                        color: rgb(0, 0, 0);
+                        background-color: blueviolet;
                   }
                 
             </style>
       </head>
       <body> 
             <div class="contenedor">
-                  <img src="pepapig.jpg" alt="pepapig" width="1000px" >
+                  <img src="pepapig.jpg" alt="pepapig" width="100%" >
       
             
                   <div style="text-align: center"> Calculadora de Pilora</div>
                         <div class="pn">
-                        <input id="pn" type="number" name="pn" > 
+                              <input id="pn" type="number" name="pn" > 
                         </div>
                         <div class="sn">
-                        <input id="sn" type="number" name="sn">
+                              <input id="sn" type="number" name="sn">
                         </div>
                         <div class="operaciones">
                               <button onclick="suma()">+</button>
@@ -74,7 +74,7 @@
                         <div class="resultado" >
                               <p > resultado <h1 >0</h1> </p>
                         </div>
-      </div> 
+            </div> 
       <script>
             
             function suma() {
