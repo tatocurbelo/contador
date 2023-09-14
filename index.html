@@ -50,12 +50,14 @@
                         color: white;
                         background-color: rgb(43, 189, 226);
                   }
+                  h2{color:white}
+                  h1{color:white}
                 
             </style>
       </head>
       <body> 
             <div class="contenedor">
-                  <img src="pepapig.jpg" alt="pepapig" width="100%" >
+                  <img src="merlina.png" alt="merlina" width="100%" >
       
             
                   <div style="text-align: center"> Calculadora de Pilora</div>
@@ -72,7 +74,7 @@
                               <button onclick="divi()">%</button>
                         </div>
                         <div class="resultado" >
-                              <p > Resultado <h1 >0</h1> </p>
+                              <p > <h1> Resultado  0</h1> </p>
                                                 </div>
                                                 <h2></h2>
             </div> 
@@ -83,7 +85,6 @@
                   var pn = document.querySelector('#pn').value;
                   var sn = document.querySelector('#sn').value;
                   res =parseFloat(pn)+parseFloat(sn);
-            
                   document.querySelector('h1').innerHTML = res;
                  
                   }
@@ -113,8 +114,11 @@
             
             var pn = document.querySelector('#pn').value;
             var sn = document.querySelector('#sn').value;
-            var res =int(pn/sn);
-                  document.querySelector('h1').innerHTML = int;
+            var res =(pn/sn); 
+            var resto = (pn-(Math.trunc(res)*sn)); 
+            document.querySelector('h1').innerHTML = Math.trunc(res) + " y resto "+ resto;
+                        
+            
       }
 
       </script>    
